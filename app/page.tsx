@@ -22,6 +22,8 @@ Quill.register(CustomCodeBlock, true);
 export default function Home() {
     const [value, setValue] = useState("");
     const dispatch = useDispatch<AppDispatch>();
+    const isValueEmpty = value.trim() === "";
+
     const formats = ["header", "list", "bullet", "link", "label", "code-block"];
 
     const modules = {
@@ -55,7 +57,9 @@ export default function Home() {
                 onChange={handleChange}
             ></ReactQuill>
 
-            <Button onClick={handleSave}>Добавить</Button>
+            <Button onClick={handleSave} disabled={isValueEmpty}>
+                Добавить
+            </Button>
         </>
     );
 }

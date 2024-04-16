@@ -1,20 +1,20 @@
 "use client";
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 interface ArticleState {
-    article: string;
+    article: string[];
 }
 
 const initialState: ArticleState = {
-    article: "",
+    article: [],
 };
 
 const articleSlice = createSlice({
     name: "article",
     initialState,
     reducers: {
-        setArticle: (state, action) => {
-            state.article = action.payload;
+        setArticle: (state, action: PayloadAction<string>) => {
+            state.article.push(action.payload);
         },
     },
 });

@@ -2,16 +2,18 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 const Blog = () => {
-    const article = useSelector((s: RootState) => s.article.article);
+    const articles = useSelector((s: RootState) => s.article.article);
 
     return (
         <div>
             <h2>Статьи</h2>
             <div>
-                {article.length <= 0 ? (
-                    <h3>Вы еще не добавили статью</h3>
+                {articles.length > 0 ? (
+                    articles.map((article, index) => {
+                        return <p key={index}>{article}</p>;
+                    })
                 ) : (
-                    article
+                    <h2>Вы не добавили статью</h2>
                 )}
             </div>
         </div>
