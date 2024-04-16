@@ -2,10 +2,11 @@
 import { useState } from "react";
 import ReactQuill, { Quill } from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import styles from "./page.module.scss";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/app/redux/store";
 import { setArticle } from "./redux/articleSlice";
+import Button from "@/components/UI/Button/Button";
+
 const СodeBlock = Quill.import("formats/code-block");
 
 class CustomCodeBlock extends СodeBlock {
@@ -38,7 +39,6 @@ export default function Home() {
     };
 
     const handleSave = () => {
-        //тут будет dispatch от redux
         dispatch(setArticle(value));
     };
 
@@ -52,9 +52,8 @@ export default function Home() {
                 modules={modules}
                 onChange={handleChange}
             ></ReactQuill>
-            <button onClick={handleSave} className={styles["button"]}>
-                Добавить
-            </button>
+
+            <Button onClick={handleSave}>Добавить</Button>
         </>
     );
 }

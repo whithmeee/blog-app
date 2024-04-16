@@ -6,12 +6,13 @@
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    transition: background-color 200ms linear;
+    transition: background-color 0.2s ease-in-out;
     margin-top: 10px;
+    border: 1px solid #000;
 
     &:hover {
-        background-color: #fff;
-        color: #000;
-        border: 1px solid #000;
+        background-color: rgb(143, 143, 255);
+        color: #fff;
+        border: 1px solid rgb(143, 143, 255);
     }
 }
