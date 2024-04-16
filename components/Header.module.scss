@@ -1,0 +1,24 @@
+.header {
+    background-color: #000;
+    height: 50px;
+    ul {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        padding-top: 10px;
+        li {
+            list-style: none;
+            a {
+                color: #fff;
+                font-size: 20px;
+                text-align: center;
+                text-decoration: none;
+                transition: color 0.2s ease-in-out;
+
+                &:hover {
+                    color: rgb(143, 143, 255);
+                }
+            }
+        }
+    }
+}
