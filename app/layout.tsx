@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { Providers } from "./redux/provider";
-import { Roboto } from "next/font/google";
 import "./global.scss";
 
 export const metadata: Metadata = {

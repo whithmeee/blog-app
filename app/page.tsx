@@ -5,7 +5,7 @@ import "react-quill/dist/quill.snow.css";
 import styles from "./page.module.scss";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/app/redux/store";
-import { clearArticle, setArticle } from "./redux/articleSlice";
+import { setArticle } from "./redux/articleSlice";
 const СodeBlock = Quill.import("formats/code-block");
 
 class CustomCodeBlock extends СodeBlock {
