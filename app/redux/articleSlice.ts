@@ -16,12 +16,9 @@ const articleSlice = createSlice({
         setArticle: (state, action) => {
             state.article = action.payload;
         },
-        clearArticle: (state) => {
-            state.article = "";
-        },
     },
 });
 
-export const { setArticle, clearArticle } = articleSlice.actions;
+export const { setArticle } = articleSlice.actions;
 
 export default articleSlice.reducer;

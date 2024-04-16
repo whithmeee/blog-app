@@ -40,6 +40,8 @@ export default function Home() {
 
     const handleSave = () => {
         dispatch(setArticle(value));
+        alert("Статья успешно добавлена");
+        setValue("");
     };
 
     return (
