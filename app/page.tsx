@@ -46,19 +46,16 @@ export default function Home() {
         setValue("");
     };
 
-    const ReactQuillComponent =
-        typeof document !== "undefined" ? ReactQuill : () => null;
-
     return (
         <>
             <h1>Добавить статью</h1>
-            <ReactQuillComponent
+            <ReactQuill
                 value={value}
                 theme="snow"
                 formats={formats}
                 modules={modules}
                 onChange={handleChange}
-            ></ReactQuillComponent>
+            ></ReactQuill>
 
             <Button onClick={handleSave} disabled={isValueEmpty}>
                 Добавить
